@@ -1,0 +1,62 @@
+{
+  "author": "Washington Botelho",
+
+  "bugs": {
+    "url": "https://github.com/wbotelhos/checky/issues"
+  },
+
+  "contributors" : ["Washington Botelho <wbotelhos@gmail.com> (http://wbotelhos.com)"],
+  "demos"        : ["demo.html"],
+
+  "dependencies": {
+    "jquery": "2"
+  },
+
+  "description": "jQuery Checky - A Checkbox Checker",
+
+  "devDependencies": {
+    "karma": "0.12",
+    "karma-chrome-launcher": "0.1",
+    "karma-firefox-launcher": "0.1",
+    "karma-ie-launcher": "0.1",
+    "karma-opera-launcher": "0.1",
+    "karma-phantomjs-launcher": "0.1",
+    "karma-safari-launcher": "0.1",
+
+    "karma-jasmine": "0.2"
+  },
+
+  "directories": {
+    "lib"  : "lib",
+    "test" : "spec"
+  },
+
+  "engines"  : { "node" : "0.10" },
+  "homepage" : "https://github.com/wbotelhos/checky",
+
+  "keywords": [
+    "checar",
+    "check",
+    "checkbox",
+    "checked",
+    "jquery",
+    "library",
+    "plugin"
+  ],
+
+  "license"     : "MIT",
+  "main"        : "lib/jquery.checky.js",
+  "maintainers" : ["Washington Botelho <wbotelhos@gmail.com> (http://wbotelhos.com)"],
+  "name"        : "checky",
+
+  "repository": {
+    "type" : "git",
+    "url"  : "https://github.com/wbotelhos/checky"
+  },
+
+  "scripts": {
+    "test": "node_modules/karma/bin/karma start spec/karma.conf.js"
+  },
+
+  "version": "0.1.0"
+}

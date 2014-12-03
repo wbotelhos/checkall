@@ -1,0 +1,26 @@
+{
+  "authors"     : ["Washington Botelho <wbotelhos@gmail.com> (http://wbotelhos.com)"],
+  "description" : "jQuery Checky - A Checkbox Checker",
+
+  "dependencies": {
+    "jquery": "2"
+  },
+
+  "homepage" : "https://github.com/wbotelhos/checky",
+  "ignore"   : ["**/.*", "node_modules", "spec", "vendor"],
+
+  "keywords": [
+    "checar",
+    "check",
+    "checkbox",
+    "checked",
+    "jquery",
+    "library",
+    "plugin"
+  ],
+
+  "license" : "MIT",
+  "main"    : "lib/jquery.checky.js",
+  "name"    : "checky",
+  "version" : "0.1.0"
+}
