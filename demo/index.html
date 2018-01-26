@@ -1,17 +1,17 @@
-<script src="../vendor/jquery.js"></script>
-<script src="../lib/jquery.checky.js"></script>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../lib/jquery.checkall.js"></script>
 
-<div>
-  <input type="checkbox" class="checky-all">
+<div class="checkall">
+  <input type="checkbox" class="checkall__all">
 
   <br><br>
 
-  <input type="checkbox" class="checky">
-  <input type="checkbox" class="checky">
+  <input type="checkbox" class="checkall__item">
+  <input type="checkbox" class="checkall__item">
 </div>
 
 <script>
   $(function() {
-    $('div').checky();
+    $('.checkall').checkall();
   });
 </script>

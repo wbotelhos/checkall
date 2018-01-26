@@ -1,18 +1,16 @@
 describe('#builder', function() {
   beforeEach(function() {
-    this.el = Helper.create();
-  });
+    fixture.load('default.html');
 
-  afterEach(function() {
-    Helper.clear();
+    this.el = $('.checkall');
   });
 
   it ('is chainable', function() {
     // when
-    var ref = this.el.checky();
+    var ref = this.el.checkall();
 
     // then
-    expect(ref[0]).toBe(this.el.data('checky').element);
+    expect(ref[0]).toBe(this.el.data('checkall').self[0]);
   });
 
   it ('interacts on selection', function() {
@@ -20,7 +18,7 @@ describe('#builder', function() {
     spyOn(this.el, 'each');
 
     // when
-    this.el.checky();
+    this.el.checkall();
 
     // then
     expect(this.el.each).toHaveBeenCalled();
@@ -28,74 +26,74 @@ describe('#builder', function() {
 
   context('when instance already exists', function() {
     beforeEach(function() {
-      this.old = this.el.checky();
+      this.old = this.el.checkall();
     });
 
     it ('does not instantiate again', function() {
       // given
-      var instance = this.old.data('checky');
+      var instance = this.old.data('checkall');
 
       // when
-      this.el.checky();
+      this.el.checkall();
 
       // then
-      expect(this.el.data('checky')).toBe(instance);
+      expect(this.el.data('checkall')).toBe(instance);
     });
   });
 
   context('when instance does not exists', function() {
     it ('calls :_create', function() {
       // given
-      spyOn(Checky.prototype, '_create');
+      spyOn(Checkall.prototype, '_create');
 
       // when
-      this.el.checky('method');
+      this.el.checkall('method');
 
       // then
-      expect(Checky.prototype._create).toHaveBeenCalled();
+      expect(Checkall.prototype._create).toHaveBeenCalled();
     });
 
     it ('defines a new instance', function() {
       // given
 
       // when
-      this.el.checky();
+      this.el.checkall();
 
       // then
-      expect(this.el.data('checky')).toEqual(jasmine.any(Checky));
+      expect(this.el.data('checkall')).toEqual(jasmine.any(Checkall));
     });
   });
 
   context('when options is a method name', function() {
-    Checky.prototype.method = function(a, b) {};
+    Checkall.prototype.method = function(a, b) {};
 
     context('and it exists', function() {
       it ('is called with given args', function() {
         // given
-        this.el.checky();
+        this.el.checkall();
 
-        spyOn(Checky.prototype, 'method');
+        spyOn(Checkall.prototype, 'method');
 
         // when
-        this.el.checky('method', 'a', 'b');
+        this.el.checkall('method', 'a', 'b');
 
         // then
-        expect(Checky.prototype.method).toHaveBeenCalledWith('a', 'b');
+        expect(Checkall.prototype.method).toHaveBeenCalledWith('a', 'b');
       });
 
       it ('is called with instance as context', function() {
         // given
-        this.el.checky({ keep: 'this' });
+        this.el.checkall({ keep: 'this' });
 
-        var instance = this.el.data('checky');
+        var instance = this.el.data('checkall');
 
-        spyOn(Checky.prototype.method, 'apply');
+        spyOn(Checkall.prototype.method, 'apply');
 
         // when
-        var chain = this.el.checky('method', 'a', 'b');
+        var chain = this.el.checkall('method', 'a', 'b');
 
         // then
-        expect(Checky.prototype.method.apply).toHaveBeenCalledWith(instance, ['a', 'b']);
+        expect(Checkall.prototype.method.apply).toHaveBeenCalledWith(instance, ['a', 'b']);
       });
     });
   });
@@ -106,12 +104,12 @@ describe('#builder', function() {
     context('but is not a method name', function() {
       it ('logs the error', function() {
         // given
-        this.el.checky();
+        this.el.checkall();
 
         spyOn($, 'error');
 
         // when
-        this.el.checky(options);
+        this.el.checkall(options);
 
         // then
         expect($.error).toHaveBeenCalledWith('Method ' + options + ' does not exist!');

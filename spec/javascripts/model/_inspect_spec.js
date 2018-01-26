@@ -2,17 +2,13 @@ describe('#_inspect', function() {
   'use strict';
 
   beforeEach(function() {
-    this.el = Helper.create();
-  });
-
-  afterEach(function() {
-    Helper.clear();
+    fixture.load('default.html');
   });
 
   context('when all of items is not checked', function() {
     it ('does not check all item', function() {
       // given
-      var instance = new Checky('.painel');
+      var instance = new Checkall('.checkall');
 
       instance._create();
 
@@ -29,7 +25,7 @@ describe('#_inspect', function() {
   context('when all of items is checked', function() {
     it ('checks all item', function() {
       // given
-      var instance = new Checky('.painel');
+      var instance = new Checkall('.checkall');
 
       instance._create();
 

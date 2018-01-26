@@ -2,16 +2,12 @@ describe('#bindAll', function() {
   'use strict';
 
   beforeEach(function() {
-    this.el = Helper.create();
-  });
-
-  afterEach(function() {
-    Helper.clear();
+    fixture.load('default.html');
   });
 
   it ('binds change on all item', function() {
     // given
-    var instance = new Checky('.painel');
+    var instance = new Checkall('.checkall');
 
     spyOn(instance.all, 'on');
 
@@ -25,7 +21,7 @@ describe('#bindAll', function() {
   context('when all is unchecked', function() {
     it ('changes the checked property to true', function() {
       // given
-      var instance = new Checky('.painel');
+      var instance = new Checkall('.checkall');
 
       instance._create();
 
@@ -42,7 +38,7 @@ describe('#bindAll', function() {
   context('when all is checked', function() {
     it ('changes the checked property to false', function() {
       // given
-      var instance = new Checky('.painel');
+      var instance = new Checkall('.checkall');
 
       instance._create();
 

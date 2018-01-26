@@ -1,7 +1,7 @@
 {
   "author": "Washington Botelho",
   "bugs": {
-    "url": "https://github.com/wbotelhos/checky/issues"
+    "url": "https://github.com/wbotelhos/checkall/issues"
   },
   "contributors": [
     "Washington Botelho <wbotelhos@gmail.com> (http://wbotelhos.com)"
@@ -35,22 +35,22 @@
   "engines": {
     "node": "^9"
   },
-  "homepage": "https://github.com/wbotelhos/checky",
+  "homepage": "https://github.com/wbotelhos/checkall",
   "keywords": [
     "check",
-    "checky",
+    "checkall",
     "checkbox",
     "checked"
   ],
   "license": "MIT",
-  "main": "lib/jquery.checky.js",
+  "main": "lib/jquery.checkall.js",
   "maintainers": [
     "Washington Botelho <wbotelhos@gmail.com> (http://wbotelhos.com)"
   ],
-  "name": "checky",
+  "name": "checkall",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wbotelhos/checky"
+    "url": "https://github.com/wbotelhos/checkall"
   },
   "scripts": {
     "test": "node_modules/karma/bin/karma start karma.conf.js"

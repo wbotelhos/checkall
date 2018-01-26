@@ -2,16 +2,12 @@ describe('#_create', function() {
   'use strict';
 
   beforeEach(function() {
-    this.el = Helper.create();
-  });
-
-  afterEach(function() {
-    Helper.clear();
+    fixture.load('default.html');
   });
 
   it ('calls the right binds', function() {
     // given
-    var instance = new Checky('.painel');
+    var instance = new Checkall('.checkall');
 
     spyOn(instance, '_bindAll');
     spyOn(instance, '_bindItems');

@@ -1,9 +1,9 @@
-# jQuery Checky - A Checkbox Checker - http://wbotelhos.com/checky
+# jQuery Checkall - A Checkbox Checker
 
-## 0.1.0
+### Next Release
 
-### News
+#### Fixes
 
-### Changes
+#### Changes
 
-### Fixes
+#### News
