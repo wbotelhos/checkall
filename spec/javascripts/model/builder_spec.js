@@ -112,7 +112,7 @@ describe('#builder', function() {
         this.el.checkall(options);
 
         // then
-        expect($.error).toHaveBeenCalledWith('Method ' + options + ' does not exist!');
+        expect($.error).toHaveBeenCalledWith('Method "' + options + '" not found.');
       });
     });
   });
