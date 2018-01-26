@@ -2,8 +2,10 @@
 
 ### Next Release
 
-#### Fixes
+### 0.1.1
 
-#### Changes
+- Nail cares.
 
-#### News
+### 0.1.0
+
+- First release.
